@@ -31,13 +31,13 @@ class BillAdapter(
             )
 
             billTileView = tbb.root
-            val tileBillHolder = TileBillHolder(tbb.nomeTv, tbb.valorPagoTv)
+            val tileBillHolder = TileBillHolder(tbb.nameTv, tbb.valueTv)
             billTileView.tag = tileBillHolder
         }
 
         with (billTileView.tag as TileBillHolder) {
-            nomeTv.text = bill.nome
-            valorPagoTv.text = bill.valorPago.toString()
+            nomeTv.text = bill.name
+            valorPagoTv.text = bill.value.toString()
         }
 
         return billTileView

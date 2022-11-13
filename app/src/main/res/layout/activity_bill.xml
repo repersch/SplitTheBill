@@ -8,7 +8,7 @@
     tools:context=".view.BillActivity">
 
     <EditText
-        android:id="@+id/nomeEt"
+        android:id="@+id/nameEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/valorPagoEt"
+        android:id="@+id/valueEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,10 +27,10 @@
         android:hint="Valor pago"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomeEt" />
+        app:layout_constraintTop_toBottomOf="@+id/nameEt" />
 
     <EditText
-        android:id="@+id/itensCompradosEt"
+        android:id="@+id/itensEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -38,15 +38,15 @@
         android:hint="Itens comprados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valorPagoEt" />
+        app:layout_constraintTop_toBottomOf="@+id/valueEt" />
 
     <Button
-        android:id="@+id/salvarBt"
+        android:id="@+id/saveBt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Salvar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itensCompradosEt" />
+        app:layout_constraintTop_toBottomOf="@+id/itensEt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

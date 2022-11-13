@@ -6,14 +6,14 @@
     android:padding="10dp">
 
     <TextView
-        android:id="@+id/nomeTv"
+        android:id="@+id/nameTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nome"
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/valorPagoTv"
+        android:id="@+id/valueTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Valor pago" />
