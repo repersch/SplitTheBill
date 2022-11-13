@@ -4,8 +4,8 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Conta(
+data class Bill(
     var nome: String,
     var valorPago: Double,
-    var itensComprados: ArrayList<String>
+    var itensComprados: String
 ): Parcelable
