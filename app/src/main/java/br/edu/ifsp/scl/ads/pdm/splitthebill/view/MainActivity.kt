@@ -70,7 +70,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(billIntent)
             }
         }
-
     }
 
     // menu de criação de novos itens
@@ -85,7 +84,12 @@ class MainActivity : AppCompatActivity() {
             R.id.addContaMi -> {
                 carl.launch(Intent(this, BillActivity::class.java))
                 true
-            } else -> {
+            }
+            R.id.splitBillMi -> {
+                carl.launch(Intent(this, SplitActivity::class.java))
+                true
+            }
+            else -> {
                 false
             }
         }

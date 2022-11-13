@@ -7,4 +7,10 @@
         android:title="Adicionar conta"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/splitBillMi"
+        android:icon="@drawable/ic_split"
+        android:title="Dividir a conta"
+        app:showAsAction="ifRoom" />
+
 </menu>
