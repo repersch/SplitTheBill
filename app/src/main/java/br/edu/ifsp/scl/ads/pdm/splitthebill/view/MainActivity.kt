@@ -13,9 +13,11 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import br.edu.ifsp.scl.ads.pdm.splitthebill.R
 import br.edu.ifsp.scl.ads.pdm.splitthebill.adapter.BillAdapter
+import br.edu.ifsp.scl.ads.pdm.splitthebill.adapter.SplitAdapter
 import br.edu.ifsp.scl.ads.pdm.splitthebill.databinding.ActivityMainBinding
 import br.edu.ifsp.scl.ads.pdm.splitthebill.model.Bill
 import br.edu.ifsp.scl.ads.pdm.splitthebill.model.Constant.EXTRA_BILL
+import br.edu.ifsp.scl.ads.pdm.splitthebill.model.Constant.LIST
 import br.edu.ifsp.scl.ads.pdm.splitthebill.model.Constant.VIEW_BILL
 
 class MainActivity : AppCompatActivity() {
@@ -24,9 +26,10 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private val billList: MutableList<Bill> = mutableListOf()
+    val billList: MutableList<Bill> = mutableListOf()
     private lateinit var billAdapter: BillAdapter
     private lateinit var carl: ActivityResultLauncher<Intent>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,7 +89,9 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.splitBillMi -> {
-                carl.launch(Intent(this, SplitActivity::class.java))
+                val splitIntent = Intent(this, SplitActivity::class.java)
+                splitIntent.putParcelableArrayListExtra(LIST, ArrayList(billList))
+                carl.launch(splitIntent)
                 true
             }
             else -> {
@@ -159,3 +164,4 @@ class MainActivity : AppCompatActivity() {
         )
     }
 }
+

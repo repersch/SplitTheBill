@@ -4,4 +4,5 @@ object Constant {
 
     const val EXTRA_BILL = "EXTRA_BILL"
     const val VIEW_BILL = "VIEW_BILL"
+    const val LIST = "LIST"
 }
