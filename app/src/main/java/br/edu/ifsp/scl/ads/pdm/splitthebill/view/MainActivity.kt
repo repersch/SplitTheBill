@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    // abre a tela de bill quando clica no botão add
+    // abre a tela de bill quando clica no botão add ou a tela de split no botão $
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.addContaMi -> {
@@ -89,6 +89,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.splitBillMi -> {
+                // envia a billList para a tela que faz a divisão dos valores
                 val splitIntent = Intent(this, SplitActivity::class.java)
                 splitIntent.putParcelableArrayListExtra(LIST, ArrayList(billList))
                 carl.launch(splitIntent)
@@ -134,7 +135,7 @@ class MainActivity : AppCompatActivity() {
             Bill(
                 id = 1,
                 name = "Berenice",
-                value = 14.55,
+                value = 10.0,
                 itens = "Sachê"
             )
         )
@@ -142,7 +143,7 @@ class MainActivity : AppCompatActivity() {
             Bill(
                 id = 2,
                 name = "Jorge",
-                value = 37.20,
+                value = 20.0,
                 itens = "Peixe"
             )
         )
@@ -150,7 +151,7 @@ class MainActivity : AppCompatActivity() {
             Bill(
                 id = 3,
                 name = "Frederico",
-                value = 54.0,
+                value = 30.0,
                 itens = "Ração"
             )
         )
@@ -158,7 +159,7 @@ class MainActivity : AppCompatActivity() {
             Bill(
                 id = 4,
                 name = "Kali",
-                value = 13.47,
+                value = 20.0,
                 itens = "Frango"
             )
         )

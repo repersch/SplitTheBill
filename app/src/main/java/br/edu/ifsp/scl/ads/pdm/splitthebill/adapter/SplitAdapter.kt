@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.pdm.splitthebill.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Context.LAYOUT_INFLATER_SERVICE
 import android.view.LayoutInflater
@@ -16,7 +17,10 @@ class SplitAdapter(
     private val billList: ArrayList<Bill>
 ): ArrayAdapter<Bill>(context, R.layout.tile_split, billList) {
 
-    private data class TileSplitHolder(val nameTv: TextView, val splitValueTv: TextView)
+    private data class TileSplitHolder(
+        val nameTv: TextView,
+        val receiveOrPayTv: TextView,
+        val splitValueTv: TextView)
     private lateinit var tsb: TileSplitBinding
 
     private var totalValue: Double = 0.0
@@ -44,13 +48,15 @@ class SplitAdapter(
             )
 
             splitTileView = tsb.root
-            val tileSplitHolder = TileSplitHolder(tsb.nameTv, tsb.valueResultTv)
+            val tileSplitHolder = TileSplitHolder(tsb.nameTv, tsb.receiveOrPayTv, tsb.valueResultTv)
             splitTileView.tag = tileSplitHolder
         }
 
         with (splitTileView.tag as TileSplitHolder) {
+            val value = bill.value - splitValue
             nameTv.text = bill.name
-            splitValueTv.text = (bill.value - splitValue).toString()
+            receiveOrPayTv.text = if (value > 0) "Receber" else "Pagar"
+            splitValueTv.text = "R$ " + if (value >= 0) String.format("%.2f", value) else String.format("%.2f", (value * -1))
         }
 
         return splitTileView

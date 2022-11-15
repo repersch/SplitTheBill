@@ -37,7 +37,7 @@ class BillAdapter(
 
         with (billTileView.tag as TileBillHolder) {
             nomeTv.text = bill.name
-            valorPagoTv.text = bill.value.toString()
+            valorPagoTv.text = "R$ " + String.format("%.2f", bill.value)
         }
 
         return billTileView
