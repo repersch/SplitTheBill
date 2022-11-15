@@ -33,10 +33,6 @@ class SplitAdapter(
         splitNumber = billList.size
         splitValue = totalValue / splitNumber
 
-        println("Valor total: $totalValue")
-        println("Quantidade de pessoas: $splitNumber")
-        println("Valor individual: $splitValue")
-
         val bill = billList[position]
         var splitTileView = convertView
 

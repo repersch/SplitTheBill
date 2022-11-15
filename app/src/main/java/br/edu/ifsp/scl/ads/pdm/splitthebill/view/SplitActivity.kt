@@ -15,8 +15,6 @@ class SplitActivity:AppCompatActivity() {
     }
     private lateinit var splitAdapter: SplitAdapter
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(asb.root)

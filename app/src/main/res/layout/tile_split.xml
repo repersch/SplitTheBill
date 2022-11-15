@@ -9,19 +9,19 @@
         android:id="@+id/nameTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome"
+        android:text="@string/nome"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/receiveOrPayTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Valor a pagar/receber" />
+        android:text="@string/pagar_ou_receber" />
 
     <TextView
         android:id="@+id/valueResultTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Valor" />
+        android:text="@string/valor" />
 
 </LinearLayout>

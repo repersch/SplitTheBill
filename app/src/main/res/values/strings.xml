@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">SplitTheBill</string>
+    <string name="app_name">Split The Bill</string>
+    <string name="nome">Nome</string>
+    <string name="valor_pago">Valor pago</string>
+    <string name="itens_comprados">Itens comprados</string>
+    <string name="salvar">Salvar</string>
+    <string name="valor_total_da_conta">Valor total da conta:</string>
+    <string name="quantidade_de_pessoas">Quantidade de pessoas:</string>
+    <string name="dividir_a_conta">Dividir a conta</string>
+    <string name="pagar_ou_receber">Pagar ou receber</string>
+    <string name="valor">Valor</string>
 </resources>
