@@ -25,7 +25,7 @@ class BillActivity: AppCompatActivity() {
         receivedBill?.let { _receivedBill ->
             with(abb) {
                 nameEt.setText(_receivedBill.name)
-                valueEt.setText(_receivedBill.value.toString())
+                valueEt.setText(String.format("%.2f", _receivedBill.value))
                 itensEt.setText(_receivedBill.itens)
             }
         }

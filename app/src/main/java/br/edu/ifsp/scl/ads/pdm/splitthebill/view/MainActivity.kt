@@ -163,6 +163,38 @@ class MainActivity : AppCompatActivity() {
                 itens = "Frango"
             )
         )
+        billList.add(
+            Bill(
+                id = 5,
+                name = "Romeu",
+                value = 35.21,
+                itens = "Torta"
+            )
+        )
+        billList.add(
+            Bill(
+                id = 6,
+                name = "Floki",
+                value = 0.0,
+                itens = ""
+            )
+        )
+        billList.add(
+            Bill(
+                id = 7,
+                name = "Linda",
+                value = 13.55,
+                itens = "Macarrão"
+            )
+        )
+        billList.add(
+            Bill(
+                id = 8,
+                name = "Ramon",
+                value = 5.31,
+                itens = "Copos"
+            )
+        )
     }
 }
 
